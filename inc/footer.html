@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>찍자 - 찍자랑 사진 찍자</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        function init() {
+            const nav1 = document.getElementsByClassName('membership')[0];
+            const nav1Exit = document.querySelector('.membership .exit_box');
+            document.querySelector('header li').addEventListener('click', function() {
+                nav1.style.display = 'block';
+            })
+            nav1Exit.addEventListener('click', function() {
+                nav1.style.display = 'none';
+            })
+
+
+        }
+        window.onload = init;
+
+    </script>
+</head>
+
+<body>
+
+    <footer>
+        <div class="notice_name">
+            공지사항
+        </div>
+    </footer>
+
+</body>
+
+</html>

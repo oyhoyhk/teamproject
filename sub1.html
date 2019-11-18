@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>찍자 - 찍자랑 사진 찍자</title>
+    <link rel="stylesheet" type="text/css" href="css/sub1.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="js/sub1.js"></script>
+</head>
+
+<body>
+    <!-- 공통영역 header -->
+    <header>
+        <div class="header_container">
+            <div id="logo">
+                <a href="main.html">
+                    <img src="img/logo.png">
+                </a>
+            </div>
+            <!--<div class="searchBox">
+    <span class="search"></span>
+    <input id="main_search" placeholder="자연, 건축, 인물, 음식 중에 입력하세요">
+    <a href="sub1.html"></a>
+</div>-->
+
+            <ul id="menu">
+                <li id='loginPopup'><a>로그인</a></li>
+                <li><a href="sub2.html">마이페이지</a></li>
+                <li><a href="sub3.html">공지사항</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- nav 1 login 팝업-->
+
+    <div class="membership">
+        <div class="membership_container">
+            <div class="exit_box">X</div>
+
+            <div class="membership_title">회원가입</div>
+            <ul>
+                <li><span><img src="img/naver_icon.ico" alt=""></span><span>네이버</span></li>
+                <li><span><img src="img/kakao_icon.svg" alt=""></span><span>카카오톡</span></li>
+                <li><span><img src="img/facebook_icon.png" alt=""></span><span>페이스북</span></li>
+                <li><span><img src="img/instagram_icon.png" alt=""></span><span>인스타그램</span></li>
+            </ul>
+            <div class="noMember">비회원으로 이용하기</div>
+        </div>
+    </div>
+
+    <!-- login popup 에서 naver 선택시 -->
+
+    <div class="naver_container">
+        <div class="naver">
+            <div class="naver_exit">X</div>
+            <input name="id" id="naver" type="text" placeholder="ID" value='admin'>
+            <input name="password" type="password" id="pw" placeholder="password" value='1234'>
+            <button id="login">Log In</button>
+        </div>
+    </div>
+    <div class="naver_container">
+        <div class="naver">
+            <div class="naver_exit">X</div>
+            <input name="id" id="kakao" type="text" placeholder="ID" value='admin'>
+            <input name="password" type="password" id="pw" placeholder="password" value='1234'>
+            <button id="login">Log In</button>
+        </div>
+    </div>
+    <div class="naver_container">
+        <div class="naver">
+            <div class="naver_exit">X</div>
+            <input name="id" id="facebook" type="text" placeholder="ID" value='admin'>
+            <input name="password" type="password" id="pw" placeholder="password" value='1234'>
+            <button id="login">Log In</button>
+        </div>
+    </div>
+    <div class="naver_container">
+        <div class="naver">
+            <div class="naver_exit">X</div>
+            <input name="id" id="insta" type="text" placeholder="ID" value='admin'>
+            <input name="password" type="password" id="pw" placeholder="password" value='1234'>
+            <button id="login">Log In</button>
+        </div>
+    </div>
+
+
+    <section>
+
+        <div class="main_container">
+            <div class="check_container">
+                <div class="lists">
+                    <div>검색결과</div>
+                    <div>자연</div>
+                    <div>건축</div>
+                    <div>인물</div>
+                    <div>음식</div>
+                </div>
+                <div class="area_list">
+                    <div class="area"><span>서울시</span><span class="checkbox"></span></div>
+                    <div class="area"><span>강원도</span><span class="checkbox"></span></div>
+                    <div class="area"><span>경상도</span><span class="checkbox"></span></div>
+                    <div class="area"><span>제주도</span><span class="checkbox"></span></div>
+                    <div class="area"><span>경기도</span><span class="checkbox"></span></div>
+                    <div class="area"><span>충청도</span><span class="checkbox"></span></div>
+                    <div class="area"><span>전라도</span><span class="checkbox"></span></div>
+                    <div class="area"><span>전체보기</span> <span class="checkbox"></span></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="photos">
+
+        </div>
+        </div>
+    </section>
+    <div class="photo_popup_background">
+        <div class="photo_popup_exit_button">X</div>
+        <div class="photo_popup">
+            <div class="pic_area"></div>
+            <div class="button_area">
+                <div class="icons">
+                    <div id="icon_favorite"></div>
+                    <div id="icon_like"></div>
+                    <div id="icon_location">지역@@@@@@@@@@@@@@@@@@@@@@@</div>
+                </div>
+                <div class="weather">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        f o o t e r
+    </footer>
+</body>
+
+</html>

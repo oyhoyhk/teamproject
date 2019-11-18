@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>찍자 - 찍자랑 사진 찍자</title>
+    <link rel="stylesheet" type="text/css" href="css/sub2.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="js/sub2.js"></script>
+</head>
+
+<body>
+    <!-- 공통영역 header -->
+    <header>
+        <div class="header_container">
+            <div id="logo"><a href="main.html"><img src="img/logo.png"></a></div>
+            <div class="searchBox"><span class="search"><a href="sub1.html#"></a></span> <input id="main_search" placeholder="검색어 입력">
+            </div>
+
+
+            <ul id="menu">
+                <li><a>로그인</a></li>
+                <li><a href="sub2.html">마이페이지</a></li>
+                <li><a href="sub3.html">공지사항</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
+    <!-- nav 1 login 팝업-->
+
+    <div class="membership">
+        <div class="membership_container">
+            <div class="exit_box">X</div>
+
+            <div class="membership_title">회원가입</div>
+            <ul>
+                <li><span><img src="img/naver_icon.ico" alt=""></span><span>네이버</span></li>
+                <li><span><img src="img/kakao_icon.svg" alt=""></span><span>카카오톡</span></li>
+                <li><span><img src="img/facebook_icon.png" alt=""></span><span>페이스북</span></li>
+                <li><span><img src="img/instagram_icon.png" alt=""></span><span>인스타그램</span></li>
+            </ul>
+            <div class="noMember">비회원으로 이용하기</div>
+        </div>
+    </div>
+
+
+    <!-- myPage  fixed 부분 -->
+
+    <section>
+        <div class="main_container">
+            <div class="tap_menu">
+                <div id="favorite">즐겨찾기</div>
+                <div id="like">좋아요</div>
+                <div id="reply">내가 쓴 댓글</div>
+            </div>
+        </div>
+    </section>
+    <div class="myinfo">
+        <div class="myinfo_upper"></div>
+        <div class="myinfo_lower"></div>
+        <div class="myinfo_myphoto"></div>
+        <div class="myinfo_name">글쓴이</div>
+        <div class="myinfo_write_button"></div>
+    </div>
+    <!-- mypage 스크롤 가능한 부분 -->
+    <div class="favorite photos">
+
+
+    </div>
+    <div class="like photos">
+
+
+    </div>
+    <div class="comment photos">
+
+
+    </div>
+    <!-- 사진 클릭 했을 때 -->
+    <div class="photo_popup_background">
+        <div class="photo_popup_exit_button">X</div>
+        <div class="photo_popup">
+            <div class="pic_area"></div>
+            <div class="button_area">
+                <div class="icons">
+                    <div id="icon_favorite"></div>
+                    <div id="icon_like"></div>
+                    <div id="icon_location">지역@@@@@@@@@@@@@@@@@@@@@@@</div>
+                </div>
+                <div class="weather">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        f o o t e r
+    </footer>
+</body>
+
+</html>

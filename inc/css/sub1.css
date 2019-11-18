@@ -1,0 +1,224 @@
+@charset 'utf-8';
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 공통 영역 header, nav */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    text-align: right;
+}
+
+header .header_container {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+header .header_container #logo {
+    float: left;
+    width: 100px;
+    height: 100%;
+    line-height: 10vh;
+}
+
+header .searchBox {
+    display: inline-block;
+    width: 400px;
+    border-bottom: 2px solid black;
+    margin-right: 0;
+    text-align: left;
+    padding-bottom: 10px;
+    margin-top: 20px;
+
+}
+
+header .searchBox #main_search {
+    vertical-align: middle;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    outline: none;
+    margin-left: 10px;
+    height: 50px;
+    width: 300px;
+}
+
+header .searchBox > span {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    background: url('../img/search.png') no-repeat;
+    background-size: 100% 100%;
+    display: inline-block;
+}
+
+header .header_container #menu {
+    float: right;
+    height: 100%;
+    text-align: right;
+}
+
+header .header_container #menu li {
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+    margin-left: 50px;
+    text-align: center;
+    line-height: 10vh;
+}
+
+
+/* nav 2 login 팝업 */
+
+.membership {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 99;
+    display: none;
+}
+
+.membership .exit_box {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    background: white;
+}
+
+.membership .membership_container {
+    width: 500px;
+    height: 65vh;
+    background: white;
+    position: absolute;
+    left: calc(50% - 250px);
+    top: calc(50% - 37vh);
+}
+
+.membership .membership_container .membership_title {
+    width: 120px;
+    height: 60px;
+    background: pink;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.membership .membership_container ul {
+    width: 80%;
+    background: lightgreen;
+    margin: 0 auto;
+}
+
+.membership .membership_container ul li {
+    width: 100%;
+    height: 60px;
+    background: green;
+    margin-top: 20px;
+}
+
+.membership .membership_container .noMember {
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+section {
+    margin-top: 7vh;
+    width: 100%;
+    background: ivory;
+    overflow: hidden;
+}
+
+section .main_top_blank {
+    width: 100%;
+    height: 6vh;
+}
+
+section .main_container {
+
+    width: 75%;
+    margin-left: 45px;
+    background: yellow;
+}
+
+aside {
+    position: fixed;
+    right: 45px;
+    background: pink;
+    width: 18%;
+    height: 85vh;
+    top: 13vh;
+}
+
+aside .aside_pic {
+    width: 90%;
+    margin: 0 auto;
+    height: 55%;
+    background: lightgreen;
+    margin-top: 15px;
+}
+
+aside .aside_list {
+    width: 90%;
+    margin: 0 auto;
+    background: lightgreen;
+    margin-top: 30px;
+}
+
+aside .aside_list li {
+    width: 90%;
+    height: 40px;
+    background: skyblue;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+aside .submit_button {
+    width: 50px;
+    height: 30px;
+    float: right;
+    margin-right: 17px;
+    margin-top: 20px;
+    background: lightgreen;
+}
+
+section table {
+    width: 100%;
+    margin: 0 auto;
+    border-spacing: 50px;
+
+}
+
+section table td {
+    width: 175px;
+    height: 170px;
+    border: 1px solid black;
+}
+
+section table td:hover {
+    background: black;
+    transition: .5s;
+}

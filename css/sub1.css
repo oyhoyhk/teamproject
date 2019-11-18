@@ -1,0 +1,512 @@
+@charset 'utf-8';
+
+
+/* 공통 영역 header, nav */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    width: 100%;
+    height: 12vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    text-align: right;
+    background: rgba(1000, 1000, 1000, 0.8);
+    display: flex;
+    justify-content: center;
+}
+
+header .header_container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header_container #logo {
+    width: 100px;
+    height: 100%;
+    margin-top: 6vh;
+}
+
+header .searchBox {
+    width: 400px;
+    border-bottom: 2px solid black;
+    text-align: left;
+    margin-left: 280px;
+}
+
+header .searchBox #main_search {
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    outline: none;
+    margin-left: 10px;
+    height: 26px;
+    width: 320px;
+}
+
+header .searchBox .search {
+    vertical-align: bottom;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    background: url('../img/search.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+header .searchBox .search a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+header .header_container #menu {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .header_container #menu li {
+    width: 100px;
+    margin-left: 20px;
+    text-align: center;
+    line-height: 12vh;
+}
+
+header .header_container #menu li a {
+    padding: 10px 5px;
+    transition: .3s;
+}
+
+header .header_container #menu li a:hover {
+    color: #ff504d;
+    transition: .3s;
+}
+
+
+
+
+/* nav 2 login 팝업 */
+
+.membership {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 99;
+    display: none;
+    text-align: center;
+
+}
+
+.membership .exit_box {
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin: 10px 10px 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.5em;
+}
+
+.membership .membership_container {
+    width: 500px;
+    height: 65vh;
+    background: white;
+    position: absolute;
+    left: calc(50% - 250px);
+    top: calc(50% - 37vh);
+}
+
+.membership .membership_container .membership_title {
+    width: 120px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+
+
+
+}
+
+.membership .membership_container ul {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.membership .membership_container ul li {
+    width: 100%;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+.membership .membership_container ul li:nth-of-type(1) {
+    background: #b1dba5;
+}
+
+.membership .membership_container ul li:nth-of-type(2) {
+    background: #e2e59d;
+}
+
+.membership .membership_container ul li:nth-of-type(3) {
+    background: #94a4c7;
+}
+
+.membership .membership_container ul li:nth-of-type(4) {
+    background: #d6a2c7;
+}
+
+
+.membership .membership_container ul li span {
+    vertical-align: middle;
+    padding: 0 10px;
+    margin-top: 15px;
+
+}
+
+.membership .membership_container ul li span img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+
+}
+
+.membership .membership_container .noMember {
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+
+
+.naver_container {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 99;
+    text-align: center;
+    display: none;
+}
+
+.naver_container .naver_exit {
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin: 10px 10px 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1.5em;
+    position: fixed;
+    right: 37%;
+    top: 13%;
+    z-index: 99;
+
+}
+
+.naver_container .naver {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 65vh;
+    background: white;
+    position: absolute;
+    left: calc(50% - 250px);
+    top: calc(50% - 37vh);
+}
+
+.naver_container:nth-of-type(1) .naver {
+    background: #A8FFA9;
+}
+
+.naver_container:nth-of-type(2) .naver {
+    background: #FFF596;
+}
+
+.naver_container:nth-of-type(3) .naver {
+    background: #9B9EFF;
+}
+
+.naver_container:nth-of-type(4) .naver {
+    background: #FFADD6;
+}
+
+.naver_container .naver input {
+    width: 80%;
+    height: 70px;
+}
+
+.naver_container .naver input:first-of-type {
+    padding-left: 20px;
+}
+
+.naver_container .naver input:nth-of-type(2) {
+    padding-left: 20px;
+}
+
+#login {
+    width: 80%;
+    height: 70px;
+}
+
+
+
+section {
+    margin-top: 150px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+section .main_container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.check_container {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.check_container .lists {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.check_container .lists > div {
+    margin-top: 5px;
+    width: 120px;
+    height: 40px;
+    border: 1px solid black;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5%;
+    transition: .3s;
+}
+
+.listOn {
+    background: #ff504d;
+}
+
+.check_container .lists > div:hover {
+    background: #ff504d;
+    transition: .3s;
+}
+
+
+.check_container .area_list {
+    width: 30%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap
+}
+
+.areaOn {
+    background: #ff504d;
+}
+
+.check_container .area_list > div {
+    text-align: right;
+    width: 25%;
+}
+
+
+.check_container .area_list .area span {
+    transition: .3s;
+}
+
+.check_container .area_list .area span:hover {
+    color: #ff504d;
+    transition: .3s;
+}
+
+.check_container .area_list .area span:first-of-type {
+    margin-right: 5px;
+}
+
+.check_container .area_list .upper {
+    padding-bottom: 5px;
+}
+
+.check_container .area_list > div .checkbox {
+    transition: .3s;
+}
+
+.check_container .area_list > div .checkbox:last-of-type {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+}
+
+.check_container .area_list > div .checkbox:hover {
+    background: #ff504d;
+    transition: .3s;
+}
+
+.photos {
+    margin-top: 30px;
+    width: 80%;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+
+.photo_popup_background {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, .5);
+    left: 0;
+    top: 0;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+}
+
+.photo_popup_background .photo_popup_exit_button {
+    width: 50px;
+    height: 50px;
+    background: white;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+}
+
+.photo_popup {
+    width: 70%;
+    height: 80%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photo_popup .pic_area {
+    width: 95%;
+    height: 80%;
+}
+
+.photo_popup .button_area {
+    width: 95%;
+    height: 7%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.photo_popup .button_area .icons {
+    width: 80%;
+    height: 100%;
+    display: flex;
+}
+
+/* 이 바로 아래부분은 지워도 됩니다
+ .icons 안의 텍스트 중앙 정렬을 위한 css 설정 입니다. */
+.photo_popup .button_area .icons > div {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon_location {
+    width: 60%;
+}
+
+
+
+#icon_favorite {
+    background: url('../img/icon_bookmark.png') no-repeat;
+    background-size: 70% 70%;
+    background-position: 50% 60%;
+}
+
+#icon_like {
+    background: url('../img/icon_like.png') no-repeat;
+    background-size: 70% 70%;
+    background-position: 50% 60%;
+}
+
+#icon_location {
+    width: 60%;
+}
+
+.photo_popup .button_area .weather {
+    background: url('../img/weather.png');
+    background-size: 100% 100%;
+    width: 5%;
+    height: 100%;
+}
+
+footer {
+    /*position: fixed;*/
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    /*left: 0;
+    bottom: 0;*/
+    text-align: center;
+    line-height: 50px;
+    font-size: 12px;
+    margin-top: 60px;
+}
