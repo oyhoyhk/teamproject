@@ -8,6 +8,16 @@ function init() {
     const mypage = login.parentNode.children[1];
 
 
+    const href = window.location.href;
+    const len = href.length;
+    let myId;
+    if (href.indexOf(`#`) > 0) {
+        myId = href.slice(href.indexOf(`#`) + 1, len);
+        login.children[0].innerHTML = myId;
+        document.querySelector(`#logo`).children[0].attributes.href.value += `#${myId}`;
+        console.log(document.querySelector(`#logo`).children[0].attributes.href)
+    }
+
 
     const loginButton = document.querySelectorAll(`#login`);
     console.log(loginButton);
@@ -29,7 +39,7 @@ function init() {
         membership.style.display = `none`;
     });
 
-    let loginId;
+    let loginId = myId;
     let logBoolean = false;
 
     loginButton.forEach(function (elem, i) {
@@ -92,8 +102,8 @@ function init() {
 
 
     const search = document.querySelector(`.main_search`).children[0];
-    const href = search.attributes[0].value;
-    console.log(href);
+    const ahref = search.attributes[0].value;
+    console.log(ahref);
     const checklist = document.querySelectorAll(`.checklist`);
     let prevIndex;
     checklist.forEach(function (elem, i) {
@@ -104,7 +114,7 @@ function init() {
             }
             prevIndex = i;
             const search = document.querySelector(`.main_search`).children[0];
-            search.attributes[0].value = href;
+            search.attributes[0].value = ahref;
             checklist[i].classList.add(`checkOn`);
 
             search.attributes[0].value += i;

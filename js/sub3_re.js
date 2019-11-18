@@ -12,8 +12,9 @@ function init() {
     let myId;
     if (href.indexOf(`#`) > 0) {
         myId = href.slice(href.indexOf(`#`) + 1, len);
-
-
+        login.children[0].innerHTML = myId;
+        document.querySelector(`#logo`).children[0].attributes.href.value += `#${myId}`;
+        console.log(document.querySelector(`#logo`).children[0].attributes.href)
     }
 
     const loginButton = document.querySelectorAll(`#login`);
