@@ -13,7 +13,6 @@ a {
     color: black;
 }
 
-
 header {
     width: 100%;
     height: 12vh;
@@ -22,7 +21,7 @@ header {
     top: 0;
     z-index: 11;
     text-align: right;
-    background: white;
+    background: rgba(1000, 1000, 1000, 0.8);
     display: flex;
     justify-content: center;
 }
@@ -63,14 +62,15 @@ header .searchBox .search {
     width: 26px;
     height: 26px;
     display: inline-block;
+    background: url('../img/search.png') no-repeat;
+    background-size: 100% 100%;
 }
 
 header .searchBox .search a {
     display: block;
     width: 100%;
     height: 100%;
-    background: url('../img/search.png') no-repeat;
-    background-size: 100% 100%;
+
 }
 
 header .header_container #menu {
