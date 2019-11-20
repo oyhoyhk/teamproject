@@ -309,6 +309,8 @@ section .main_container {
     background: #fff;
     left: calc(50% - 100px);
     top: 47%;
+    background-size: 100% 150%;
+    background-repeat: no-repeat;
 }
 
 .myinfo .myinfo_name {
@@ -332,12 +334,14 @@ section .main_container {
     opacity: .8;
 }
 
+
 .favorite {
     position: absolute;
     left: 10%;
     top: 25%;
     width: 55%;
     z-index: 3;
+    display: flex;
 }
 
 .like {
@@ -350,7 +354,6 @@ section .main_container {
     align-items: center;
     flex-wrap: wrap;
     z-index: -1;
-    opacity: 0;
 }
 
 .comment {
@@ -363,11 +366,48 @@ section .main_container {
     align-items: center;
     flex-wrap: wrap;
     z-index: -1;
-    opacity: 0;
-    display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+}
+
+.favorite_area {
+    background: pink;
+    transition: .5s;
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    width: 55%;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.like_area {
+    background: lightgreen;
+    transition: .5s;
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    width: 55%;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.comment_area {
+    background: gray;
+    transition: .5s;
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    width: 55%;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.tapOn {
+    opacity: 1;
+    display: block;
+    transition: .5s;
 }
 
 .photo {
@@ -375,6 +415,8 @@ section .main_container {
     height: 200px;
     border: 1px solid black;
     margin-bottom: 100px;
+    display: inline-block;
+    margin-right: 13px;
 
 }
 

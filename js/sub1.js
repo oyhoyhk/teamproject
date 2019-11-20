@@ -2,9 +2,12 @@
       $('#menu li').eq(0).children('a').on('click', function () {
           $('.membership').css('display', 'block');
       })
-      $('.membership_container .exit_box').on('click', function () {
+      let a = $('.membership_container .exit_box');
+
+      a.on('click', function () {
           $('.membership').css('display', 'none  ');
-      })
+      });
+
 
       //문서 로딩 시 ajax로 photo 생성 후 배치
       $.ajax({
