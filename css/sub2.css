@@ -377,7 +377,7 @@ section .main_container {
     position: absolute;
     left: 10%;
     top: 25%;
-    width: 55%;
+    width: 57%;
     opacity: 0;
     transition: 0.5s;
 }

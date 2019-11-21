@@ -41,14 +41,46 @@ function init() {
         myinfoUpper.style.backgroundImage = `url(${myInfoBack})`;
         myinfoMyphoto.style.backgroundImage = `url(${myInfoMyphoto})`;
 
+        loadPhoto(`favorite`, 0);
+
+    }
+
+
+    function loadPhoto(category, number) {
+        const data = xhq.responseXML.children[0];
+        let chosen;
+        Array.from(data.children).forEach(function (elem, i) {
+            elem.tagName === category ? chosen = elem : 0;
+        })
+
+
+        const urls = Array.from(chosen.children).map(function (elem, i) {
+            return elem.children[0].attributes[0].value;
+        });
+        const locs = Array.from(chosen.children).map(function (elem, i) {
+            return elem.children[1].children[0].innerHTML;
+        });
+        const areas = Array.from(chosen.children).map(function (elem, i) {
+            return elem.children[1].children[1].innerHTML;
+        });
+
+        console.log(chosen.children.length);
+
+        const tap_area = document.querySelectorAll(`.tap_area`)[number];
+        console.log(tap_area);
+
+        for (let i = 0; i < chosen.children.length; i++) {
+            tap_area.innerHTML += `<div class="photo"><div class="cover"><div class="loc"></div><div class="area"></div></div></div>`;
+        }
+    }
+
+    /*f
         const favoriteList = data.children[2].children;
         const favoriteArea = document.querySelector(`.favorite_area`);
         Array.from(favoriteList).forEach(function (elem, i) {
             favoriteArea.innerHTML += (`<div class="photo"><div class="cover"><div class="upper"></div><div class="lower"></div></div></div>`)
         });
-
-    }
-
+    }*/
     // header 가운데 검색 기능 
 
     let inputValue;
