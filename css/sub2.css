@@ -353,7 +353,6 @@ section .main_container {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    z-index: -1;
 }
 
 .comment {
@@ -365,14 +364,12 @@ section .main_container {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    z-index: -1;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
 }
 
 .favorite_area {
-    background: pink;
     transition: .5s;
     position: absolute;
     left: 10%;
@@ -383,23 +380,21 @@ section .main_container {
 }
 
 .like_area {
-    background: lightgreen;
     transition: .5s;
     position: absolute;
     left: 10%;
     top: 25%;
-    width: 55%;
+    width: 57%;
     opacity: 0;
     transition: 0.5s;
 }
 
 .comment_area {
-    background: gray;
     transition: .5s;
     position: absolute;
     left: 10%;
     top: 25%;
-    width: 55%;
+    width: 57%;
     opacity: 0;
     transition: 0.5s;
 }
@@ -414,9 +409,45 @@ section .main_container {
     width: 200px;
     height: 200px;
     border: 1px solid black;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     display: inline-block;
-    margin-right: 13px;
+    margin-right: 60px;
+    background-size: 200% 120%;
+}
+
+.photo .cover {
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    position: relative;
+    transition: .5s;
+}
+
+.cover:hover {
+    opacity: .8;
+    transition: .5s;
+}
+
+.photo .cover .loc {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 100%;
+    height: 10%;
+    color: white;
+    font-size: 1.1rem;
+
+}
+
+.photo .cover .area {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    width: 100%;
+    height: 10%;
+    color: white;
+    font-size: 1.1rem;
 
 }
 
@@ -452,10 +483,31 @@ footer {
 .photo_popup_background .photo_popup_exit_button {
     width: 50px;
     height: 50px;
-    background: white;
     position: absolute;
-    right: 10%;
-    top: 10%;
+    right: 18%;
+    top: 14%;
+    border: 3px solid white;
+    border-radius: 100%;
+}
+
+.photo_popup_background .photo_popup_exit_button .bLeft {
+    display: block;
+    position: absolute;
+    width: 30px;
+    border: 3px solid white;
+    transform: rotate(-45deg);
+    left: 14%;
+    top: 45%;
+}
+
+.photo_popup_background .photo_popup_exit_button .bRight {
+    display: block;
+    position: absolute;
+    width: 30px;
+    border: 3px solid white;
+    transform: rotate(45deg);
+    left: 14%;
+    top: 45%;
 }
 
 .photo_popup {
@@ -471,6 +523,7 @@ footer {
 .photo_popup .pic_area {
     width: 95%;
     height: 80%;
+    background-size: 100% 100%;
 }
 
 .photo_popup .button_area {
@@ -486,8 +539,6 @@ footer {
     display: flex;
 }
 
-/* 이 바로 아래부분은 지워도 됩니다
- .icons 안의 텍스트 중앙 정렬을 위한 css 설정 입니다. */
 .photo_popup .button_area .icons > div {
     width: 5%;
     display: flex;
@@ -509,6 +560,52 @@ footer {
 
 #icon_location {
     width: 60%;
+    justify-content: flex-start;
+}
+
+#icon_location .loc_icon {
+    width: 40px;
+    height: 30px;
+    background: url('../img/loc_icon.png');
+    background-size: 100% 100%;
+    margin-right: 20px;
+}
+
+#icon_location .loc_info {
+
+    height: 100%:
+}
+
+.comment_area .list {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+.comment_area .list:nth-of-type(even) {
+    background: #ccc
+}
+
+.comment_area .list .date {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.comment_area .list .text {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-right: 100px;
 }
 
 .photo_popup .button_area .weather {

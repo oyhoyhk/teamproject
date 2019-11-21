@@ -97,7 +97,7 @@ function init() {
             if (idx === 0) {
                 turningCount--;
             }
-        }, 4000);
+        }, 5000);
     }
 
 
